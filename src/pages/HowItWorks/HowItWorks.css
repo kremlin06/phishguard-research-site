@@ -1,0 +1,6 @@
+.how__label {
+  color: var(--color-text-tertiary);
+  font-size: var(--text-caption);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-snug);
+}

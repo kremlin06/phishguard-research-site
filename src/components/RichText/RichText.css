@@ -1,0 +1,8 @@
+.rich-list {
+  max-width: var(--measure);
+  padding-inline-start: var(--space-5);
+}
+
+.rich-list > li + li {
+  margin-block-start: var(--space-2);
+}

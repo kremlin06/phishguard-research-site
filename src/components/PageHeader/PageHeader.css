@@ -1,0 +1,16 @@
+.page-header {
+  padding-block: var(--space-8) var(--space-7);
+}
+
+.page-header > * + * {
+  margin-block-start: var(--space-4);
+}
+
+.page-header__lead {
+  color: var(--color-text-secondary);
+  font-size: var(--text-lead);
+}
+
+.page-header + .section {
+  margin-block-start: 0;
+}

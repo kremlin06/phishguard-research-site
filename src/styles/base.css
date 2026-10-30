@@ -1,0 +1,128 @@
+/*
+  Inter, self-hosted. Untouched variable font from the official Inter 4.1 release (web/InterVariable.woff2).
+  License: public/fonts/LICENSE.txt (SIL OFL 1.1).
+  The 400 600 range limits use to the three documented weights (400, 500, 600).
+*/
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/InterVariable.woff2") format("woff2");
+  font-weight: 400 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, figure, blockquote, dl, dd, ul, ol {
+  margin: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-body);
+  overflow-wrap: break-word;
+}
+
+h1, h2, h3 {
+  font-weight: var(--weight-semibold);
+}
+
+h1 {
+  font-size: var(--text-page-title);
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-display);
+}
+
+h2 {
+  font-size: var(--text-section);
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-heading);
+}
+
+h3 {
+  font-size: var(--text-h3);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-heading);
+}
+
+p {
+  max-width: var(--measure);
+}
+
+code {
+  padding-inline: var(--space-1);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-sunken);
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+table {
+  font-variant-numeric: tabular-nums;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-decoration-thickness: var(--border-width);
+  text-underline-offset: 0.2em;
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+  text-decoration-thickness: 2px;
+}
+
+a:active {
+  color: var(--color-accent-active);
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  :root {
+    --glass-bg: var(--color-bg);
+    --glass-filter: none;
+  }
+}
+
+@media (forced-colors: active) {
+  :root {
+    --color-focus: Highlight;
+    --color-border: CanvasText;
+    --color-border-strong: CanvasText;
+  }
+}

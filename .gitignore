@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+build/
+.vite/
+
+# Local environment files and secrets
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.keystore
+*.jks
+secrets.*
+credentials.*
+
+# Logs and caches
+*.log
+npm-debug.log*
+.cache/
+.eslintcache
+*.local
+
+# Android and research material must never be added to this repository
+*.apk
+*.aab
+*.csv
+*.xlsx
+*.db
+*.sqlite
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

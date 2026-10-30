@@ -1,0 +1,26 @@
+.not-found {
+  padding-block: var(--space-8) var(--space-7);
+  text-align: center;
+}
+
+.not-found__body {
+  margin-inline: auto;
+}
+
+.not-found__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: var(--space-5);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.not-found__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--target-min);
+  min-width: var(--target-min);
+  justify-content: center;
+}
