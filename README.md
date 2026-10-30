@@ -45,15 +45,7 @@ npm run preview:pages
 
 `npm run build` checks the content, builds the site into `dist/`, and prerenders every page. `npm run preview:pages` serves `dist/` the way GitHub Pages does, at `http://localhost:4180/phishguard-research-site/`.
 
-## GitHub Pages
 
-This is a GitHub Pages **project site**. Its address has the form:
-
-```
-https://YOUR_GITHUB_USERNAME.github.io/phishguard-research-site/
-```
-
-The base path `/phishguard-research-site/` is set in `site.config.json`. When the GitHub Actions workflow in `.github/workflows/deploy.yml` builds the site, it works out the address from the repository itself, so the canonical links and the sitemap use your real user name. Step-by-step upload and publishing instructions are in `GITHUB_UPLOAD_GUIDE.md`.
 
 ## Content notes
 
