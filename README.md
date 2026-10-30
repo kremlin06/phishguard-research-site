@@ -26,27 +26,6 @@ The site introduces the app, explains how the detector works, answers common que
 
 Node.js 22.12 or newer (Node 22 LTS recommended) and npm are required.
 
-## Run it locally
-
-```powershell
-cd "<path to the phishguard-research-site folder>"
-npm ci
-npm run dev
-```
-
-`npm run dev` prints a local address (normally `http://localhost:5173/`). Press Ctrl+C to stop it.
-
-## Production build
-
-```powershell
-npm run build
-npm run preview:pages
-```
-
-`npm run build` checks the content, builds the site into `dist/`, and prerenders every page. `npm run preview:pages` serves `dist/` the way GitHub Pages does, at `http://localhost:4180/phishguard-research-site/`.
-
-
-
 ## Content notes
 
 The research summary in `src/content/research.js` follows the thesis manuscript. Results marked preliminary are not final findings. The datasets, SMS messages, labeling records and consent records are not part of this repository.
