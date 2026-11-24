@@ -27,6 +27,8 @@ npm-debug.log*
 
 # Android and research material must never be added to this repository
 *.apk
+# Tester build offered on the Home page (see src/content/facts.js). Only this exact file is allowed.
+!public/downloads/PhishGuard-test-build.apk
 *.aab
 *.csv
 *.xlsx

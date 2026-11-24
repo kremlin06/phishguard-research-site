@@ -1,4 +1,9 @@
 const distributionStates = {
+  test: {
+    primary: { label: "Download the test build (APK)", href: "file" },
+    secondary: { label: "See how it works", to: "/how-it-works" },
+    status: ["Research project", "Test build for testers, still in development"],
+  },
   none: {
     primary: { label: "See how it works", to: "/how-it-works" },
     secondary: { label: "Read the FAQ", to: "/faq" },
@@ -8,6 +13,19 @@ const distributionStates = {
 
 export const home = {
   distributionStates,
+
+  testBuild: {
+    id: "test-build",
+    heading: "Test build",
+    body: [
+      "This is an early test build of PhishGuard for people helping the research team try the app. It is still in development: the detection algorithm is being fixed and refined, so it can make mistakes and it is not a finished or released product.",
+      [
+        "**Android only.** Open the downloaded file on your phone and allow installs from your browser or file manager when Android asks. Android may also show a security prompt about an unrecognized app.",
+        "**Your messages stay on your phone.** Detection runs on the device; the privacy policy describes the one optional feature that goes online.",
+        "**Check the file.** The SHA-256 below should match the downloaded file.",
+      ],
+    ],
+  },
 
   hero: {
     title: "Phishing text detection that runs on your phone.",

@@ -10,6 +10,9 @@ import { facts } from "../../content/facts.js";
 import { home } from "../../content/home.js";
 import "./Home.css";
 
+// File links are relative to the site's base path (GitHub Pages project site).
+const withBase = (path) => `${import.meta.env.BASE_URL}${path}`;
+
 export default function Home() {
   const hero = home.distributionStates[facts.distribution];
 
@@ -24,7 +27,11 @@ export default function Home() {
           {hero && (
             <>
               <div className="hero__actions">
-                <Button to={hero.primary.to}>{hero.primary.label}</Button>
+                {hero.primary.href ? (
+                  <Button href={withBase(facts.testBuild.file)}>{hero.primary.label}</Button>
+                ) : (
+                  <Button to={hero.primary.to}>{hero.primary.label}</Button>
+                )}
                 <Button to={hero.secondary.to} variant="secondary">
                   {hero.secondary.label}
                 </Button>
@@ -35,6 +42,20 @@ export default function Home() {
         </div>
         <ExampleMessage {...home.exampleMessage} />
       </div>
+
+      {facts.distribution === "test" && (
+        <Section id={home.testBuild.id} title={home.testBuild.heading} split>
+          <Blocks items={home.testBuild.body} />
+          <p className="hero__status">
+            Updated {facts.testBuild.date} · {facts.testBuild.size}
+            <br />
+            SHA-256: <code style={{ overflowWrap: "anywhere" }}>{facts.testBuild.sha256}</code>
+          </p>
+          <p>
+            <Button href={withBase(facts.testBuild.file)}>{home.distributionStates.test.primary.label}</Button>
+          </p>
+        </Section>
+      )}
 
       <Section id={home.problem.id} title={home.problem.heading} split>
         <Blocks items={home.problem.body} />
